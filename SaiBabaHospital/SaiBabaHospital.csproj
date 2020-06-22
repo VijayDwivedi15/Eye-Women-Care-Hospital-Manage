@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70AAFFCB-0C51-4A86-9E2E-CF528C70144A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SaiBabaHospital</RootNamespace>
+    <AssemblyName>SaiBabaHospital</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeEyeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="HospitalDemoEye\contactbannereye.jpg" />
+    <Content Include="HospitalDemoEye\css\animate.css" />
+    <Content Include="HospitalDemoEye\css\font-awesome.min.css" />
+    <Content Include="HospitalDemoEye\css\foundation.min.css" />
+    <Content Include="HospitalDemoEye\css\lightbox.min.css" />
+    <Content Include="HospitalDemoEye\css\owl.carousel.css" />
+    <Content Include="HospitalDemoEye\css\owl.video.play.html" />
+    <Content Include="HospitalDemoEye\css\theme-styles.css" />
+    <Content Include="HospitalDemoEye\eventbannereye.jpg" />
+    <Content Include="HospitalDemoEye\eyeaboutusbanner.jpg" />
+    <Content Include="HospitalDemoEye\fonts\fontawesome-webfont5b62.svg" />
+    <Content Include="HospitalDemoEye\images\close.png" />
+    <Content Include="HospitalDemoEye\images\Doctors\drAshish.jpg" />
+    <Content Include="HospitalDemoEye\images\Doctors\drSangeetaBawankure.jpg" />
+    <Content Include="HospitalDemoEye\images\Doctors\drShamaliKohade.jpg" />
+    <Content Include="HospitalDemoEye\images\Doctors\drSonalVyas.jpg" />
+    <Content Include="HospitalDemoEye\images\favicon.png" />
+    <Content Include="HospitalDemoEye\images\help\author.png" />
+    <Content Include="HospitalDemoEye\images\help\award1.png" />
+    <Content Include="HospitalDemoEye\images\help\award2.png" />
+    <Content Include="HospitalDemoEye\images\help\banner-doctor.png" />
+    <Content Include="HospitalDemoEye\images\help\blog1.jpg" />
+    <Content Include="HospitalDemoEye\images\help\blog2.jpg" />
+    <Content Include="HospitalDemoEye\images\help\blog3.jpg" />
+    <Content Include="HospitalDemoEye\images\help\bodybg.jpg" />
+    <Content Include="HospitalDemoEye\images\help\doctor.png" />
+    <Content Include="HospitalDemoEye\images\help\Doctor1.html" />
+    <Content Include="HospitalDemoEye\images\help\doctor1.jpg" />
+    <Content Include="HospitalDemoEye\images\help\Doctor2.html" />
+    <Content Include="HospitalDemoEye\images\help\doctor2.jpg" />
+    <Content Include="HospitalDemoEye\images\help\Doctor4.html" />
+    <Content Include="HospitalDemoEye\images\help\doctor4.jpg" />
+    <Content Include="HospitalDemoEye\images\help\Doctor5.html" />
+    <Content Include="HospitalDemoEye\images\help\doctor5.jpg" />
+    <Content Include="HospitalDemoEye\images\help\Doctor6.html" />
+    <Content Include="HospitalDemoEye\images\help\doctor6.jpg" />
+    <Content Include="HospitalDemoEye\images\help\doctors-team.jpg" />
+    <Content Include="HospitalDemoEye\images\help\footer-bg.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery1.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery10.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery11.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery12.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery2.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery3.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery4.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery5.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery6.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery7.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery8.jpg" />
+    <Content Include="HospitalDemoEye\images\help\gallery\gallery9.jpg" />
+    <Content Include="HospitalDemoEye\images\help\lenseandframe.png" />
+    <Content Include="HospitalDemoEye\images\help\lenseandframe2.png" />
+    <Content Include="HospitalDemoEye\images\help\lenseandframe3.png" />
+    <Content Include="HospitalDemoEye\images\help\nursinghome.jpg" />
+    <Content Include="HospitalDemoEye\images\help\optometrist-feature.png" />
+    <Content Include="HospitalDemoEye\images\help\our-staff.jpg" />
+    <Content Include="HospitalDemoEye\images\help\partner1.jpg" />
+    <Content Include="HospitalDemoEye\images\help\partner2.jpg" />
+    <Content Include="HospitalDemoEye\images\help\partner3.jpg" />
+    <Content Include="HospitalDemoEye\images\help\partner4.jpg" />
+    <Content Include="HospitalDemoEye\images\help\partner5.jpg" />
+    <Content Include="HospitalDemoEye\images\help\partner6.jpg" />
+    <Content Include="HospitalDemoEye\images\help\products\attractive-product.png" />
+    <Content Include="HospitalDemoEye\images\help\products\product1.jpg" />
+    <Content Include="HospitalDemoEye\images\help\products\product2.jpg" />
+    <Content Include="HospitalDemoEye\images\help\products\product3.jpg" />
+    <Content Include="HospitalDemoEye\images\help\products\product4.jpg" />
+    <Content Include="HospitalDemoEye\images\help\products\product5.jpg" />
+    <Content Include="HospitalDemoEye\images\help\products\product6.jpg" />
+    <Content Include="HospitalDemoEye\images\help\products\product7.jpg" />
+    <Content Include="HospitalDemoEye\images\help\services\contract-screening.jpg" />
+    <Content Include="HospitalDemoEye\images\help\services\dry-eyes.jpg" />
+    <Content Include="HospitalDemoEye\images\help\services\eye-exam.jpg" />
+    <Content Include="HospitalDemoEye\images\help\services\eye-infection.jpg" />
+    <Content Include="HospitalDemoEye\images\help\services\glaucoma-screening.jpg" />
+    <Content Include="HospitalDemoEye\images\help\services\lasik-consultation.jpg" />
+    <Content Include="HospitalDemoEye\images\help\services\lense-consultation.jpg" />
+    <Content Include="HospitalDemoEye\images\help\services\post-operative-lasik-care.jpg" />
+    <Content Include="HospitalDemoEye\images\help\slide01eye.jpg" />
+    <Content Include="HospitalDemoEye\images\help\slide02eye.jpg" />
+    <Content Include="HospitalDemoEye\images\help\slide03eye.jpg" />
+    <Content Include="HospitalDemoEye\images\help\slide1.jpg" />
+    <Content Include="HospitalDemoEye\images\help\slide2.jpg" />
+    <Content Include="HospitalDemoEye\images\help\slide3.jpg" />
+    <Content Include="HospitalDemoEye\images\help\slide4.jpg" />
+    <Content Include="HospitalDemoEye\images\help\testi1.jpg" />
+    <Content Include="HospitalDemoEye\images\help\testi2.jpg" />
+    <Content Include="HospitalDemoEye\images\help\testi3.jpg" />
+    <Content Include="HospitalDemoEye\images\help\title-bg.jpg" />
+    <Content Include="HospitalDemoEye\images\loading.gif" />
+    <Content Include="HospitalDemoEye\images\logo.png" />
+    <Content Include="HospitalDemoEye\images\next.png" />
+    <Content Include="HospitalDemoEye\images\prev.png" />
+    <Content Include="HospitalDemoEye\images\Services\cataract.jpg" />
+    <Content Include="HospitalDemoEye\images\Services\cornia.jpg" />
+    <Content Include="HospitalDemoEye\images\Services\diabetic.jpeg" />
+    <Content Include="HospitalDemoEye\images\Services\glukoma.jpg" />
+    <Content Include="HospitalDemoEye\images\Services\headache.jpg" />
+    <Content Include="HospitalDemoEye\images\Services\lasiceye.jpg" />
+    <Content Include="HospitalDemoEye\images\Services\orbit.jpg" />
+    <Content Include="HospitalDemoEye\images\Services\pediatriceyecare.jpg" />
+    <Content Include="HospitalDemoEye\images\Services\squint.jpg" />
+    <Content Include="HospitalDemoEye\infrabannerEye.jpg" />
+    <Content Include="HospitalDemoEye\js\foundation.min.js" />
+    <Content Include="HospitalDemoEye\js\jquery-1.12.3.min.js" />
+    <Content Include="HospitalDemoEye\js\lightbox.min.js" />
+    <Content Include="HospitalDemoEye\js\owl.carousel.min.js" />
+    <Content Include="HospitalDemoEye\js\webful.js" />
+    <Content Include="HospitalDemoEye\lib\assets\coloredbg.png" />
+    <Content Include="HospitalDemoEye\lib\assets\gridtile.png" />
+    <Content Include="HospitalDemoEye\lib\assets\gridtile_3x3.png" />
+    <Content Include="HospitalDemoEye\lib\assets\gridtile_3x3_white.png" />
+    <Content Include="HospitalDemoEye\lib\assets\gridtile_white.png" />
+    <Content Include="HospitalDemoEye\lib\assets\loader.gif" />
+    <Content Include="HospitalDemoEye\lib\css\closedhand.html" />
+    <Content Include="HospitalDemoEye\lib\css\layers.css" />
+    <Content Include="HospitalDemoEye\lib\css\navigation.css" />
+    <Content Include="HospitalDemoEye\lib\css\openhand.html" />
+    <Content Include="HospitalDemoEye\lib\css\settings.css" />
+    <Content Include="HospitalDemoEye\lib\fonts\pe-icon-7-stroke\css\pe-icon-7-stroke.css" />
+    <Content Include="HospitalDemoEye\lib\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-strokebb1d.svg" />
+    <Content Include="HospitalDemoEye\lib\fonts\revicons\revicons90c6.svg" />
+    <Content Include="HospitalDemoEye\lib\js\extensions\revolution.extension.actions.min.js" />
+    <Content Include="HospitalDemoEye\lib\js\extensions\revolution.extension.carousel.min.js" />
+    <Content Include="HospitalDemoEye\lib\js\extensions\revolution.extension.kenburn.min.js" />
+    <Content Include="HospitalDemoEye\lib\js\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="HospitalDemoEye\lib\js\extensions\revolution.extension.migration.min.js" />
+    <Content Include="HospitalDemoEye\lib\js\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="HospitalDemoEye\lib\js\extensions\revolution.extension.parallax.min.js" />
+    <Content Include="HospitalDemoEye\lib\js\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="HospitalDemoEye\lib\js\extensions\revolution.extension.video.min.js" />
+    <Content Include="HospitalDemoEye\lib\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="HospitalDemoEye\lib\js\jquery.themepunch.tools.min.js" />
+    <Content Include="HospitalDemoEye\logoEYE.png" />
+    <Content Include="HospitalDemoEye\logoEYEfavicon.png" />
+    <Content Include="HospitalDemoEye\style.css" />
+    <Content Include="HospitalDemoSimple\aboutbanner.jpg" />
+    <Content Include="HospitalDemoSimple\css\animate.min.css" />
+    <Content Include="HospitalDemoSimple\css\animations.css" />
+    <Content Include="HospitalDemoSimple\css\blank.html" />
+    <Content Include="HospitalDemoSimple\css\bootstrap-datepicker.min.css" />
+    <Content Include="HospitalDemoSimple\css\bootstrap-dropdownhover.css" />
+    <Content Include="HospitalDemoSimple\css\bootstrap.min.css" />
+    <Content Include="HospitalDemoSimple\css\fancyBox.css" />
+    <Content Include="HospitalDemoSimple\css\fancybox_loading%402x.html" />
+    <Content Include="HospitalDemoSimple\css\fancybox_loading.html" />
+    <Content Include="HospitalDemoSimple\css\fancybox_overlay.png" />
+    <Content Include="HospitalDemoSimple\css\flaticon.css" />
+    <Content Include="HospitalDemoSimple\css\font-awesome.min.css" />
+    <Content Include="HospitalDemoSimple\css\fonts\Stroke-Gap-Icons.html" />
+    <Content Include="HospitalDemoSimple\css\magnific-popup.css" />
+    <Content Include="HospitalDemoSimple\css\owl.css" />
+    <Content Include="HospitalDemoSimple\css\owl.video.play.html" />
+    <Content Include="HospitalDemoSimple\css\pe-icon-7-stroke.css" />
+    <Content Include="HospitalDemoSimple\css\responsive.css" />
+    <Content Include="HospitalDemoSimple\css\stroke-gap.css" />
+    <Content Include="HospitalDemoSimple\css\style.css" />
+    <Content Include="HospitalDemoSimple\eye-hospital.jpg" />
+    <Content Include="HospitalDemoSimple\fonts\Flaticon-2.html" />
+    <Content Include="HospitalDemoSimple\fonts\Flaticon-3.html" />
+    <Content Include="HospitalDemoSimple\fonts\Flaticon.html" />
+    <Content Include="HospitalDemoSimple\fonts\Flaticon.svg" />
+    <Content Include="HospitalDemoSimple\fonts\Flaticond41d.html" />
+    <Content Include="HospitalDemoSimple\fonts\fontawesome-webfont3e6e-2.html" />
+    <Content Include="HospitalDemoSimple\fonts\fontawesome-webfont3e6e-3.html" />
+    <Content Include="HospitalDemoSimple\fonts\fontawesome-webfont3e6e-4.html" />
+    <Content Include="HospitalDemoSimple\fonts\fontawesome-webfont3e6e.html" />
+    <Content Include="HospitalDemoSimple\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="HospitalDemoSimple\fonts\fontawesome-webfontd41d.html" />
+    <Content Include="HospitalDemoSimple\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="HospitalDemoSimple\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="HospitalDemoSimple\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="HospitalDemoSimple\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="HospitalDemoSimple\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="HospitalDemoSimple\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="HospitalDemoSimple\fonts\Pe-icon-7-strokebb1d-2.html" />
+    <Content Include="HospitalDemoSimple\fonts\Pe-icon-7-strokebb1d-3.html" />
+    <Content Include="HospitalDemoSimple\fonts\Pe-icon-7-strokebb1d.html" />
+    <Content Include="HospitalDemoSimple\fonts\Pe-icon-7-strokebb1d.svg" />
+    <Content Include="HospitalDemoSimple\fonts\Pe-icon-7-stroked41d.html" />
+    <Content Include="HospitalDemoSimple\img\bg\1.jpg" />
+    <Content Include="HospitalDemoSimple\img\bg\2.jpg" />
+    <Content Include="HospitalDemoSimple\img\bg\3.jpg" />
+    <Content Include="HospitalDemoSimple\img\bg\4.jpg" />
+    <Content Include="HospitalDemoSimple\img\bg\5.jpg" />
+    <Content Include="HospitalDemoSimple\img\bg\6.jpg" />
+    <Content Include="HospitalDemoSimple\img\bg\8.html" />
+    <Content Include="HospitalDemoSimple\img\bg\body.html" />
+    <Content Include="HospitalDemoSimple\img\bg\c1.png" />
+    <Content Include="HospitalDemoSimple\img\blog\1.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\2.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\3.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\a1.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\a2.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\a3.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\s1.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\s2.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\s3.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\w1.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\w2.jpg" />
+    <Content Include="HospitalDemoSimple\img\blog\w3.jpg" />
+    <Content Include="HospitalDemoSimple\img\depertment\1.jpg" />
+    <Content Include="HospitalDemoSimple\img\depertment\2.jpg" />
+    <Content Include="HospitalDemoSimple\img\depertment\3.jpg" />
+    <Content Include="HospitalDemoSimple\img\depertment\4.jpg" />
+    <Content Include="HospitalDemoSimple\img\fancybox\fancybox_sprite.png" />
+    <Content Include="HospitalDemoSimple\img\favicon.png" />
+    <Content Include="HospitalDemoSimple\img\flicker\1.jpg" />
+    <Content Include="HospitalDemoSimple\img\flicker\2.jpg" />
+    <Content Include="HospitalDemoSimple\img\flicker\3.jpg" />
+    <Content Include="HospitalDemoSimple\img\flicker\4.jpg" />
+    <Content Include="HospitalDemoSimple\img\flicker\5.jpg" />
+    <Content Include="HospitalDemoSimple\img\flicker\6.jpg" />
+    <Content Include="HospitalDemoSimple\img\flicker\7.jpg" />
+    <Content Include="HospitalDemoSimple\img\flicker\8.jpg" />
+    <Content Include="HospitalDemoSimple\img\flicker\9.jpg" />
+    <Content Include="HospitalDemoSimple\img\logo-black.png" />
+    <Content Include="HospitalDemoSimple\img\logo.png" />
+    <Content Include="HospitalDemoSimple\img\portfolio\1.jpg" />
+    <Content Include="HospitalDemoSimple\img\portfolio\2.jpg" />
+    <Content Include="HospitalDemoSimple\img\portfolio\3.jpg" />
+    <Content Include="HospitalDemoSimple\img\portfolio\4.jpg" />
+    <Content Include="HospitalDemoSimple\img\portfolio\5.jpg" />
+    <Content Include="HospitalDemoSimple\img\portfolio\6.jpg" />
+    <Content Include="HospitalDemoSimple\img\portfolio\7.jpg" />
+    <Content Include="HospitalDemoSimple\img\portfolio\8.jpg" />
+    <Content Include="HospitalDemoSimple\img\preloder\1.gif" />
+    <Content Include="HospitalDemoSimple\img\services\1.jpg" />
+    <Content Include="HospitalDemoSimple\img\services\3.jpg" />
+    <Content Include="HospitalDemoSimple\img\services\4.jpg" />
+    <Content Include="HospitalDemoSimple\img\services\5.jpg" />
+    <Content Include="HospitalDemoSimple\img\services\6.jpg" />
+    <Content Include="HospitalDemoSimple\img\services\8.jpg" />
+    <Content Include="HospitalDemoSimple\img\services\s1.jpg" />
+    <Content Include="HospitalDemoSimple\img\services\w1.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\1.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\2.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\b1.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\b2.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\bg1.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\c1.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\c2.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\c3.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\card.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\s1.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\s2.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\s3.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\s4.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\s5.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\s6.jpg" />
+    <Content Include="HospitalDemoSimple\img\shop\sell.png" />
+    <Content Include="HospitalDemoSimple\img\team\1.png" />
+    <Content Include="HospitalDemoSimple\img\team\2.png" />
+    <Content Include="HospitalDemoSimple\img\team\3.png" />
+    <Content Include="HospitalDemoSimple\img\team\4.png" />
+    <Content Include="HospitalDemoSimple\img\team\5.png" />
+    <Content Include="HospitalDemoSimple\img\team\rachanadr.jpg" />
+    <Content Include="HospitalDemoSimple\img\team\srikadr.jpg" />
+    <Content Include="HospitalDemoSimple\img\team\swatidr.jpg" />
+    <Content Include="HospitalDemoSimple\img\testimonial\1.png" />
+    <Content Include="HospitalDemoSimple\img\testimonial\2.png" />
+    <Content Include="HospitalDemoSimple\img\testimonial\3.png" />
+    <Content Include="HospitalDemoSimple\js\bootstrap-datepicker.min.js" />
+    <Content Include="HospitalDemoSimple\js\bootstrap-dropdownhover.min.js" />
+    <Content Include="HospitalDemoSimple\js\bootstrap.min.js" />
+    <Content Include="HospitalDemoSimple\js\comming-soon.js" />
+    <Content Include="HospitalDemoSimple\js\css3-animate-it.js" />
+    <Content Include="HospitalDemoSimple\js\gallery.js" />
+    <Content Include="HospitalDemoSimple\js\jquery.min.js" />
+    <Content Include="HospitalDemoSimple\js\map.js" />
+    <Content Include="HospitalDemoSimple\js\owl.carousel.min.js" />
+    <Content Include="HospitalDemoSimple\js\player.min.js" />
+    <Content Include="HospitalDemoSimple\js\retina.js" />
+    <Content Include="HospitalDemoSimple\js\script.js" />
+    <Content Include="HospitalDemoSimple\logo.png" />
+    <Content Include="HospitalDemoSimple\mainsiteslide02.jpg" />
+    <Content Include="HospitalDemoSimple\mainsiteslide03.jpg" />
+    <Content Include="HospitalDemoSimple\slide01.jpg" />
+    <Content Include="HospitalDemoSimple\women-hospital.jpg" />
+    <Content Include="MainHomePageDesign\css\bootstrap.css" />
+    <Content Include="MainHomePageDesign\css\css_slider.css" />
+    <Content Include="MainHomePageDesign\css\font-awesome.min.css" />
+    <Content Include="MainHomePageDesign\css\style.css" />
+    <Content Include="MainHomePageDesign\fonts\fontawesome-webfont.svg" />
+    <Content Include="MainHomePageDesign\images\about.jpg" />
+    <Content Include="MainHomePageDesign\images\b.jpg" />
+    <Content Include="MainHomePageDesign\images\banner.png" />
+    <Content Include="MainHomePageDesign\images\blog1.jpg" />
+    <Content Include="MainHomePageDesign\images\gallery1.jpg" />
+    <Content Include="MainHomePageDesign\images\gallery2.jpg" />
+    <Content Include="MainHomePageDesign\images\gallery3.jpg" />
+    <Content Include="MainHomePageDesign\images\gallery4.jpg" />
+    <Content Include="MainHomePageDesign\images\gallery5.jpg" />
+    <Content Include="MainHomePageDesign\images\gallery6.jpg" />
+    <Content Include="MainHomePageDesign\images\hspback.jpg" />
+    <Content Include="MainHomePageDesign\images\innerbg.jpg" />
+    <Content Include="MainHomePageDesign\images\ser1.jpg" />
+    <Content Include="MainHomePageDesign\images\ser2.jpg" />
+    <Content Include="MainHomePageDesign\images\ser3.jpg" />
+    <Content Include="MainHomePageDesign\images\service1.jpg" />
+    <Content Include="MainHomePageDesign\images\service4.jpg" />
+    <Content Include="MainHomePageDesign\images\service5.jpg" />
+    <Content Include="MainHomePageDesign\images\t1.jpg" />
+    <Content Include="MainHomePageDesign\images\t2.jpg" />
+    <Content Include="MainHomePageDesign\images\t3.jpg" />
+    <Content Include="MainHomePageDesign\images\t4.jpg" />
+    <Content Include="MainHomePageDesign\images\tooth.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="HospitalDemoEye\fonts\fontawesome-webfont5b62.eot" />
+    <Content Include="HospitalDemoEye\fonts\fontawesome-webfont5b62.ttf" />
+    <Content Include="HospitalDemoEye\fonts\fontawesome-webfont5b62.woff" />
+    <Content Include="HospitalDemoEye\fonts\fontawesome-webfont5b62.woff2" />
+    <Content Include="HospitalDemoEye\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="HospitalDemoEye\lib\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-strokebb1d.eot" />
+    <Content Include="HospitalDemoEye\lib\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-strokebb1d.ttf" />
+    <Content Include="HospitalDemoEye\lib\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-strokebb1d.woff" />
+    <Content Include="HospitalDemoEye\lib\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroked41d.eot" />
+    <Content Include="HospitalDemoEye\lib\fonts\revicons\revicons90c6.eot" />
+    <Content Include="HospitalDemoEye\lib\fonts\revicons\revicons90c6.ttf" />
+    <Content Include="HospitalDemoEye\lib\fonts\revicons\revicons90c6.woff" />
+    <Content Include="MainHomePageDesign\fonts\fontawesome-webfont.eot" />
+    <Content Include="MainHomePageDesign\fonts\fontawesome-webfont.ttf" />
+    <Content Include="MainHomePageDesign\fonts\fontawesome-webfont.woff" />
+    <Content Include="MainHomePageDesign\fonts\fontawesome-webfont.woff2" />
+    <Content Include="MainHomePageDesign\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\SBH Hospital.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutEye.cshtml" />
+    <Content Include="Views\Home\Doctors.cshtml" />
+    <Content Include="Views\Home\Department.cshtml" />
+    <Content Include="Views\HomeEye\Index.cshtml" />
+    <Content Include="Views\HomeEye\Doctors.cshtml" />
+    <Content Include="Views\HomeEye\AboutUsRaipur.cshtml" />
+    <Content Include="Views\HomeEye\Services.cshtml" />
+    <Content Include="Views\HomeEye\Event.cshtml" />
+    <Content Include="Views\HomeEye\Media.cshtml" />
+    <Content Include="Views\HomeEye\Career.cshtml" />
+    <Content Include="Views\HomeEye\ContactUs.cshtml" />
+    <Content Include="Views\Home\Accommodation.cshtml" />
+    <Content Include="Views\Home\Career.cshtml" />
+    <Content Include="Views\Home\TPA.cshtml" />
+    <Content Include="Views\Home\Social.cshtml" />
+    <Content Include="Views\Home\Homemain.cshtml" />
+    <Content Include="Views\Home\ComingSoon.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\HomeEye\Blog.cshtml" />
+    <Content Include="Views\HomeEye\Appointment.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4214</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4214/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
